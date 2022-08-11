@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    {% load static %}
+    <meta charset="utf-8">
+    <title>Facebook demo</title>
+    <link rel="stylesheet" href="{% static '/css/fb.css' %} ">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  </head>
+  <body>
+
+    <div class="container">
+      <div class="header">
+
+        <div class="logo">
+          <h1 class="logo-text" href="{% static '/css/fb.css' %}">facebook</h1>
+        </div>
+
+
+        <div class="login">
+          <form>
+            <table class="login-controls">
+              <tr>
+                <td><label class="login-label">Email or Mobile</label></td>
+                <td><label class="login-label">Password</label></td>
+              </tr>
+              <tr>
+                <td><input type="text" name="" value=""></td>
+                <td><input type="text" name="" value=""></td>
+                <td><input class="submit-btn" type="submit"  value="Login"></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td class="text">Forgotten account?</td>
+              </tr>
+
+            </table>
+
+          </form>
+
+        </div>
+
+
+      </div>
+
+      <div class="main-body">
+        <div class="left-section">
+          <p class="para">Facebook helps you connect and share with <br>the peaple in your life.</p>
+          <img  class="image" src="static/images/fb.jpeg" alt="">
+        </div>
+        <div class="right-section">
+          <div class="heading">
+            <h1>Create an account</h1>
+            <h3>It's quick and easy.</h3>
+
+          </div>
+          <div class="form">
+            <form class="signup-form" action="index.html" id="signup-form">
+              <div class="signup-field name">
+
+
+                <input name="fname" type="text" class="input-box" placeholder="First name">
+
+                <input  name="sname" type="text" class="input-box" placeholder="Surname">
+
+                  </div>
+                  <div class="signup-field">
+
+               <input   name="emailaddress" type="text" class="input-box" placeholder="Mobile Number or Email">
+                  </div>
+                  <div class="signup-field">
+
+              <input name="password" type="password" class="input-box" placeholder="Password">
+                </div>
+
+              <div class="signup-field">
+                <label class="gray">Birthday</label><br><br>
+
+
+              <select class="bday" name="day">
+
+                <option value="">1</option>
+                <option value="">2</option>
+                <option value="">3</option>
+                <option value="">4</option>
+                <option value="">5</option>
+
+
+              </select>
+              <select class="bday" name="month">
+                <option value="">January</option>
+                <option value="">Feb</option>
+                <option value="">March</option>
+                <option value="">april</option>
+
+              </select>
+
+              <select class="bday" name="year">
+                <option value="">2022</option>
+                  <option value="">2021</option>
+                    <option value="">2020</option>
+                      <option value="">2019</option>
+
+              </select>
+              </div>
+              <div class="signup-field">
+                <label class="gray">Gender</label>
+
+                <label for="">Male</label>
+                <input type="radio" name="gender" value="">
+                <label  for="">Female</label>
+                <input type="radio" name="gender" value="">
+
+
+              </div>
+              <input  class="signup" type="submit" name="" value="SignUp">
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.js"></script>
+    <script src="script.js">
+      $(document).ready(function(){
+  $("#signup-form").validate({
+    rules:{
+      fname:{
+        required:true,
+        minilength:4,
+        maxlength:6
+
+    },
+    sname:{
+      required:true,
+      minilength:4
+    },
+    emailaddress:{
+      required:true,
+      email:true,
+    },
+    password:{
+      minilength:6
+    }
+
+    }
+  })
+})
+
+    </script>
+  </body>
+</html>
